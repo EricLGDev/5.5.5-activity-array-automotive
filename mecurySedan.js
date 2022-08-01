@@ -18,6 +18,23 @@ class Car extends VehicleModule {
             return this.scheduleService;
         }
     }
+
+    start() {
+        if (this.passenger < this.maxPassengers) {
+            if((num + this.passenger) <= this.maxPassengers) {
+                this.passenger = num;
+                return this.passenger;
+            } else {
+                console.log(this.model + " " + this.make + " does not have any room left.");
+            }
+        } else {
+            console.log(this.model + " " + this.make + " is full.")
+        }
+    }
+
+    loadPassenger(num) {
+        
+    }
 }
 
 //this shows how to call from this module...
