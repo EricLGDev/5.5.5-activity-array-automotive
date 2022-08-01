@@ -11,6 +11,13 @@ class Car extends VehicleModule {
         this.fuel = 10;
         this.scheduleService = false;
     }
+
+    checkService() {
+        if (this.mileage > 30000) {
+            this.scheduleService = true
+            return this.scheduleService;
+        }
+    }
 }
 
 //this shows how to call from this module...
